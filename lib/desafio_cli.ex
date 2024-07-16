@@ -1,7 +1,23 @@
 defmodule DesafioCli do
   def main(_args) do
-    Intro.main()
-    GetNames.main([])
+    IO.puts(Intro.type())
+    IO.puts(Intro.finish())
+    IO.puts(Intro.upperlowercase())
+    IO.puts(Intro.accent())
+
+    list = GetNames.main([])
+
+    IO.puts("Iniciando geração da lista...")
+    IO.puts("")
+    IO.puts("Essa é a lista real:")
+
+    updated_list = ShowList.main(list)
+
+    Enum.each(updated_list, fn name ->
+      IO.puts(name)
+    end)
+
+    restart()
   end
 
   def restart do
