@@ -2,12 +2,10 @@ defmodule GetNames do
   def main(list) do
     name = IO.gets("Nome: ") |> String.trim() |> String.upcase()
 
-    if name == "" do
-      IO.puts("Iniciando geração da lista...")
-      IO.puts("")
-      ShowList.main(list)
-    else
+    if name != "" do
       main(list ++ [name])
+    else
+      list
     end
   end
 end
