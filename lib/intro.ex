@@ -1,11 +1,17 @@
 defmodule Intro do
-  def main() do
-    IO.puts("Digite o nome do rei ou rainha e pressione Enter.")
+  def type() do
+    "Digite o nome do rei ou rainha e pressione Enter."
+  end
 
-    IO.puts("Ao terminar a lista apenas pressione Enter sem digitar nenhum nome.")
+  def finish() do
+    "Ao terminar a lista apenas pressione Enter sem digitar nenhum nome."
+  end
 
-    IO.puts("* Diferenças entre letras maiúsculas e minúsculas serão desconsideradas.")
+  def upperlowercase() do
+    "* Diferenças entre letras maiúsculas e minúsculas serão desconsideradas."
+  end
 
-    IO.puts("* Já acentuação será considerado como diferença entre os nomes.")
+  def accent() do
+    "* Já acentuação será considerado como diferença entre os nomes."
   end
 end
