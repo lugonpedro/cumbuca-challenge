@@ -1,17 +1,17 @@
 defmodule DesafioCli do
-  @moduledoc """
-  Ponto de entrada para a CLI.
-  """
-
-  @doc """
-  A função main recebe os argumentos passados na linha de
-  comando como lista de strings e executa a CLI.
-  """
   def main(_args) do
-    IO.puts(phrase())
+    Intro.main()
+    GetNames.main([])
   end
 
-  def phrase() do
-    "Hello, world!"
+  def restart do
+    IO.puts("Deseja começar a lista novamente? (s/n)")
+    option = IO.gets("> ") |> String.trim() |> String.upcase()
+
+    if option == "S" do
+      main(0)
+    else
+      System.halt(0)
+    end
   end
 end
